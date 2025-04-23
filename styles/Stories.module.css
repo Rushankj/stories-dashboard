@@ -1,0 +1,664 @@
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f7f9fc;
+}
+
+.mainContent {
+  flex: 1;
+  overflow: auto;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+}
+
+.profileBadge {
+  display: flex;
+  align-items: center;
+  background-color: #f3f0ff;
+  border-radius: 9999px;
+  padding: 4px 12px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  background-color: #6b46c1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.profileInfo {
+  margin-right: 8px;
+}
+
+.welcomeText {
+  font-size: 12px;
+  color: #718096;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chevronIcon {
+  color: #718096;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 384px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 16px 8px 40px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #4c1d95;
+  box-shadow: 0 0 0 2px rgba(76, 29, 149, 0.2);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.iconButton {
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton {
+  background-color: #1e1b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tabsContainer {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  color: #4a5568;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.activeTab {
+  background-color: #1e1b4b;
+  color: white;
+}
+
+.storiesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .storiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .storiesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.storyCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.imageContainer {
+  position: relative;
+  height: 192px;
+}
+
+.storyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageActions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.imageActionButton {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  cursor: pointer;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.storyTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1a202c;
+}
+
+.storyMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metaLeft {
+  display: flex;
+  align-items: center;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.metaDivider {
+  margin: 0 8px;
+  color: #cbd5e0;
+}
+
+.date {
+  font-size: 12px;
+  color: #718096;
+}
+
+.statusBadge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.statusPublished {
+  background-color: #e6fffa;
+  color: #047857;
+}
+
+.statusDraft {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.statusCreated {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.viewButton {
+  flex: 1;
+  padding: 8px;
+  background-color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.moreButton {
+  padding: 8px;
+  background-color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Mobile sidebar toggle */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  .header {
+    margin-bottom: 16px;
+  }
+  
+  .pageTitle {
+    font-size: 20px;
+  }
+  
+  .profileBadge {
+    padding: 4px 8px;
+  }
+  
+  .profileInfo {
+    display: none;
+  }
+  
+  .searchContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .searchWrapper {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 12px;
+  }
+  
+  .actionButtons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .contentWrapper {
+    padding: 16px 12px;
+  }
+}
+
+/* Responsive mobile sidebar */
+.mobileSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  display: none;
+}
+
+.mobileSidebarContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobileSidebarOpen {
+  transform: translateX(0);
+}
+
+.mobileSidebarActive {
+  display: block;
+}
+
+.closeSidebarButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+
+
+
+
+                         /* Mobile Navigation Menu styles */
+.mobileNavMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;               /* Space for the close button */
+  background-color: white;
+}
+
+.mobileMenuContainer {
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.mobileMenuItem:hover {
+  background-color: #f1f5f9;
+}
+
+.mobileMenuItemActive {
+  background-color: #1e1b4b;
+  color: white;
+}
+
+.mobileMenuText {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mobileSupportContainer {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+}
+
+.mobileSupportButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+.mobileSupportText {
+  font-size: 14px;
+  font-weight: 500;
+}
+                              /* Make sure mobile sidebar has enough width at all screen sizes */
+.mobileSidebarContent {
+  width: 80%;
+  max-width: 300px;
+  min-width: 250px;
+  overflow-y: auto;
+}
+
+@media (max-width: 320px) {
+  .mobileSidebarContent {
+    min-width: 85%;
+    width: 85%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              /* Fade in animation for the mobile sidebar overlay */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+                                     /* Enhanced slide in animation for sidebar */
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0.7; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+                                                   /* Subtle pop animation for menu items */
+@keyframes popIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  70% { transform: scale(1.03); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+                                      /* Apply animations to elements */
+.mobileSidebarActive {
+  display: block;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.mobileSidebarOpen {
+  transform: translateX(0);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+                              /* Apply staggered animations to menu items */
+.mobileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4a5568;
+  animation: popIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+                                      /* Stagger the menu items to create a cascade effect */
+.mobileMenuItem:nth-child(1) { animation-delay: 0.1s; }
+.mobileMenuItem:nth-child(2) { animation-delay: 0.15s; }
+.mobileMenuItem:nth-child(3) { animation-delay: 0.2s; }
+.mobileMenuItem:nth-child(4) { animation-delay: 0.25s; }
+.mobileMenuItem:nth-child(5) { animation-delay: 0.3s; }
+.mobileMenuItem:nth-child(6) { animation-delay: 0.35s; }
+.mobileMenuItem:nth-child(7) { animation-delay: 0.4s; }
+.mobileMenuItem:nth-child(8) { animation-delay: 0.45s; }
+.mobileMenuItem:nth-child(9) { animation-delay: 0.5s; }
+
+                             /* Add a subtle hover effect for menu items */
+.mobileMenuItem:hover {
+  background-color: #f1f5f9;
+  transform: translateX(4px);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+                                               /* Support button animation */
+.mobileSupportButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #eef2ff;
+  color: #4338ca;
+  animation: popIn 0.5s ease-out 0.6s forwards;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.mobileSupportButton:hover {
+  background-color: #e0e7ff;
+  transform: scale(1.03);
+}
+
+                               /* Close button animation */
+.closeSidebarButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+  z-index: 60;
+  padding: 8px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  animation: popIn 0.3s ease-out forwards;
+}
+
+.closeSidebarButton:hover {
+  color: #1e1b4b;
+  transform: rotate(90deg);
+}
+
+                               /* Story cards animations */
+.storyCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.storyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+                                        /* Button hover animations */
+.viewButton, .addButton, .iconButton, .moreButton {
+  transition: all 0.2s ease;
+}
+
+.viewButton:hover, .moreButton:hover {
+  background-color: #e2e8f0;
+}
+
+.addButton:hover {
+  background-color: #312e81;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.iconButton:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+                                       /* Tab hover animation */
+.tab {
+  transition: all 0.2s ease;
+}
+
+.tab:hover:not(.activeTab) {
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+}
