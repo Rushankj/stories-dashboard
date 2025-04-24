@@ -150,13 +150,14 @@ export default function StoriesDashboard() {
     >
       <X size={24} />
     </button>
-    {/* Instead of using the Sidebar component directly, copy its essential parts */}
+    
+    {/* Instead of using the Sidebar component directly, copied its essential parts */}
     
     
     <div className={styles.mobileNavMenu}>
       <div className={styles.mobileMenuContainer}>
         
-        {/* Loop through the same menu items that Sidebar uses */}
+        {/* Looped through the same menu items that Sidebar uses , because it is causing the renderiung issue in mobile view  */}
         
         
         {[
@@ -229,7 +230,7 @@ export default function StoriesDashboard() {
             </div>
           </div>
 
-          {/* Search and Actions */}
+          {/* Search and Actions  */}
          
           <div className={styles.searchContainer}>
             <div className={styles.searchWrapper}>
@@ -276,7 +277,7 @@ export default function StoriesDashboard() {
             {stories.map((story) => (
               <div key={story.id} className={styles.storyCard}>
                 <div className={styles.imageContainer}>
-                  {/* Using placeholder images since we don't have actual images */}
+                  {/* Using placeholder images since I  did not  used actual images */}
                   <img 
                     src={`/api/placeholder/400/320`} 
                     alt={story.title} 
