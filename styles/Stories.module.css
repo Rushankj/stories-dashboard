@@ -59,9 +59,9 @@
   display: flex;
   align-items: center;
   background-color: white;
-  border-radius: 12px; /* ⬅️ Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
-  border: 1px solid #e0e0e0; /* Optional: clean border to define shape */
+  border-radius: 12px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e0e0e0; 
   padding: 4px 12px;
 }
 
