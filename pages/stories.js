@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { 
-  ArrowLeft, 
+  MoveLeft, 
   Search, 
-  Calendar, 
-  Sliders, 
+  CalendarDays, 
+  ListFilter, 
   Eye, 
   Copy, 
   MoreHorizontal,
@@ -23,11 +23,12 @@ import {
   Settings,
   Move,
   Bell, 
-  Phone,
+  Headset,
   CreditCard
 } from 'lucide-react';
 import Sidebar from '@/Components/Sidebar';
 import styles from '../styles/Stories.module.css';
+
 
 export default function StoriesDashboard() {
   const [activeTab, setActiveTab] = useState('All');
@@ -48,7 +49,7 @@ export default function StoriesDashboard() {
       category: 'BUSINESS',
       date: '20 Sep 2022',
       status: 'Published',
-      image: '/images/code-empire.jpg'
+      image: 'public\images\images.jpeg'
     },
     {
       id: 2,
@@ -184,7 +185,7 @@ export default function StoriesDashboard() {
       <div className={styles.mobileSupportContainer}>
         <a href="/support">
           <div className={styles.mobileSupportButton}>
-            <Phone size={18} />
+            <Headset size={18} />
             <span className={styles.mobileSupportText}>Contact Support</span>
           </div>
         </a>
@@ -209,7 +210,7 @@ export default function StoriesDashboard() {
                 <Menu size={24} />
               </button>
               <button className={styles.backButton}>
-                <ArrowLeft size={20} />
+                <MoveLeft size={20} />
               </button>
               <h1 className={styles.pageTitle}>Stories</h1>
             </div>
@@ -242,10 +243,10 @@ export default function StoriesDashboard() {
             
             <div className={styles.actionButtons}>
               <button className={styles.iconButton}>
-                <Calendar size={20} />
+                <CalendarDays size={20} />
               </button>
               <button className={styles.iconButton}>
-                <Sliders size={20} />
+                <ListFilter size={20} />
               </button>
               <button className={styles.addButton}>
                 Add New Story

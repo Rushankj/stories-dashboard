@@ -12,7 +12,7 @@ import {
   Settings,
   Move,
   Bell, 
-  Phone,
+  Headset,
   CreditCard
 } from 'lucide-react';
 import styles from '../styles/Sidebar.module.css';
@@ -51,7 +51,7 @@ export default function Sidebar() {
       <div className={styles.supportContainer}>
         <Link href="/support">
           <div className={styles.supportButton}>
-            <Phone size={18} />
+            <Headset size={18} />
             <span className={styles.supportText}>Contact Support</span>
           </div>
         </Link>
